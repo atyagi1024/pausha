@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -52,10 +51,12 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'pausha.urls'
 
+website_global_templates = os.path.join(BASE_DIR, 'pausha/templates/')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [website_global_templates],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
